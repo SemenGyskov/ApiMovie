@@ -4,19 +4,19 @@ from .models import Afish, Film, Genre, Director
 class FilmsSerialiser(serializers.ModelSerializer):
     class Meta:
         model = Film
-        fields = ['id', 'title', 'date', 'country','director','genre']
+        fields = '__all__'
 
 class AfishSerialiser(serializers.ModelSerializer):
     class Meta:
         model = Afish
-        fields = ['id','date', 'film']
+        fields = '__all__'
 
 class GenreSerialiser(serializers.ModelSerializer):
     class Meta:
         model = Genre
-        fields = ['id','name']
+        fields = '__all__'
 
 class DirectorSerialiser(serializers.ModelSerializer):
     class Meta:
         model = Director
-        fields = ['id', 'FIO','datebirtch']
+        fields = '__all__'
